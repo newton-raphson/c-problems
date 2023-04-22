@@ -1,3 +1,5 @@
+*.dSYM
+build/
 # Prerequisites
 *.d
 
