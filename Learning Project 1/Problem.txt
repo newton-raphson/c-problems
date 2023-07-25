@@ -1,0 +1,58 @@
+# Mini Learning Project 1
+
+In this mini learning project, we will implement a class hierarchy for dense matrices, matrix-vector products, matrix-matrix products, and vector norms. Additionally, we will define a class hierarchy for sparse matrices and their matrix-vector product. We will then explore two types of linear solvers: direct solver (Gaussian Elimination) and iterative solver (Conjugate Gradient linear solver). Finally, we will examine the computational complexity of these solvers.
+
+## Dense Matrix Class Hierarchy
+
+We will define the following classes for the dense matrix class hierarchy:
+
+1. `Matrix`: The base class representing a generic dense matrix with basic functionalities.
+2. `DenseMatrix`: A derived class from `Matrix` representing dense matrices.
+3. `VectorNorm`: A class to calculate the norm of a vector.
+
+## Sparse Matrix Class Hierarchy
+
+We will define the following classes for the sparse matrix class hierarchy:
+
+1. `SparseMatrix`: A class representing a generic sparse matrix with functionalities to access and modify elements efficiently.
+
+## Linear Solvers
+
+We will define the following classes for the linear solver hierarchy:
+
+1. `GaussianEliminationSolver`: A class implementing the direct solver using Gaussian Elimination for solving linear equations.
+2. `ConjugateGradientSolver`: A class implementing the iterative solver using the Conjugate Gradient method for solving linear equations.
+
+## Computational Complexity
+
+We will analyze the computational complexity of both direct and iterative solvers to understand their efficiency in solving linear equations.
+
+# Mini Learning Project 2
+
+In this mini learning project, we will implement a 1D Finite Element Method (FEM) solver for linear equations. The solver will be used to solve the heat equation. We will define the following classes:
+
+## Element Class
+
+The `Element` class will represent the basis functions for each element in the 1D domain. It will provide functionality to evaluate basis functions and their derivatives.
+
+## Grid Class
+
+The `Grid` class will manage the global domain and discretization. It will divide the domain into elements and store them.
+
+## Equation Class
+
+The `Equation` class will construct the local matrix and assemble it into the global matrix. It will also assemble the local right-hand side vector and the global right-hand side vector.
+
+## Solver Class
+
+The `Solver` class will solve the linear system using the assembled global matrix and right-hand side vector. It will implement a solver, such as the Conjugate Gradient method.
+
+## Solving Heat Equation
+
+We will use the implemented 1D FEM solver to solve the heat equation and observe its behavior with different discretizations.
+
+## Convergence and Computational Complexity
+
+We will study the convergence behavior of the FEM solver by comparing the numerical solution with the exact solution for a simplified case. Additionally, we will analyze the computational complexity of the FEM solver to understand its efficiency and scalability.
+
+Both mini learning projects will provide valuable insights into fundamental linear algebra concepts, numerical methods, and computational complexity analysis.
