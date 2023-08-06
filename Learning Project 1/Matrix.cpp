@@ -171,3 +171,21 @@ double& SparseMatrix::operator()(int row, int col) {
     rowPtr[row + 1]++;
     return values.back();
 }
+void SparseMatrix::display() const {
+        for (int i = 0; i < numRows; ++i) {
+            for (int j = 0; j < numCols; ++j) {
+                bool isNonZero = false;
+                for (int k = rowPtr[i]; k < rowPtr[i + 1]; ++k) {
+                    if (colIdx[k] == j) {
+                        std::cout << values[k] << " ";
+                        isNonZero = true;
+                        break;
+                    }
+                }
+                if (!isNonZero) {
+                    std::cout << "0 ";
+                }
+            }
+            std::cout << std::endl;
+        }
+}

@@ -60,6 +60,7 @@ public:
     void setElement(int row, int col, double value);
     double& operator()(int row, int col) override;
     const double& operator()(int row, int col) const override;
+    void display() const;
 
 };
 #endif // MATRIX_HPP

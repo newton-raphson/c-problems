@@ -1,6 +1,9 @@
 /usr/bin/clang++ -fcolor-diagnostics -fansi-escape-codes -g \
     "/Users/samundrakarki/Desktop/C++/c-problems/Learning Project 1/Matrix.cpp" \
     "/Users/samundrakarki/Desktop/C++/c-problems/Learning Project 1/VectorNorm.cpp" \
+    "/Users/samundrakarki/Desktop/C++/c-problems/Learning Project 1/Element.cpp" \
+    "/Users/samundrakarki/Desktop/C++/c-problems/Learning Project 1/Grid.cpp" \
+    "/Users/samundrakarki/Desktop/C++/c-problems/Learning Project 1/Equation.cpp" \
     "/Users/samundrakarki/Desktop/C++/c-problems/Learning Project 1/LinearSolver.cpp" \
     "/Users/samundrakarki/Desktop/C++/c-problems/Learning Project 1/heatsolver.cpp" \
     -o "/Users/samundrakarki/Desktop/C++/c-problems/Learning Project 1/build/test"

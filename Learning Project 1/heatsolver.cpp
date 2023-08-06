@@ -5,18 +5,19 @@
 #include "Equation.h"
 
 
-
 int main() {
-    const int numElements = 100; // Number of elements in the mesh
-    const double domainLength = 1.0; // Length of the 1D domain
+    const int numElements = 10; // Number of elements in the mesh
+    const double domainLength = 2; // Length of the 1D domain
 
     // Create the grid
     std::vector<double> nodeCoordinates;
+    std::vector<double> constant;
     for (int i = 0; i <= numElements; ++i) {
         nodeCoordinates.push_back(i * domainLength / numElements);
+        constant.push_back(1);
     }
 
-    Grid grid(numElements, nodeCoordinates);
+    Grid grid(numElements, nodeCoordinates,constant);
 
     // Create the equation
     Equation equation(grid);
@@ -25,9 +26,9 @@ int main() {
     equation.assembleGlobalMatrix(grid);
 
     // Apply boundary conditions (Dirichlet boundary conditions)
-    equation.applyBoundaryConditions(0, 25);       // u(0) = 0
-    equation.applyBoundaryConditions(numElements, 40);   // u(L) = 0
-
+    equation.applyBoundaryConditions(0, 15);       // u(0) = 0
+    equation.applyBoundaryConditions(numElements, 10);   // u(L) = 10
+    equation.displayGlobalStiffnessMatrix();
     // Solve the linear system
     std::vector<double> temperatureDistribution = equation.solve();
 
